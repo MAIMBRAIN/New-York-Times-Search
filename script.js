@@ -6,7 +6,7 @@ var startYear = $("#startYear");
 var endYear = $("#endYear");
 // search button clicks and grabs data from api
 $("#searchButton").on("click", function(){
-    var queryURL = "https://api.nytimes.com/svc/archive/v1/2019/1.json?api-key=" + key;
+    var queryURL = "https://api.nytimes.com/svc/archive/" + {searchTerm} +"/" + {startYear} + "/" + {endYear}.json + "?api-key=" + key;
     $.ajax({
         URL: queryURL,
         method: 'GET'
@@ -16,3 +16,4 @@ $("#searchButton").on("click", function(){
 
     })
 })
+
